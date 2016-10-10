@@ -1,0 +1,52 @@
+﻿<div class="dashboard">
+    <div class="headerDiv">
+        <img src="../../../assets/images/Nerdsoft_Tracker_Logo.svg" />
+    </div>
+
+    <div class="dashboardToolbar">
+        <md-toolbar class="md-toolbar" md-scroll-shrink="">
+            <div class="md-toolbar-tools">
+                <label>Quick Search Lead:</label>
+                <md-input-container md-no-float layout="row" layout-align="start center">
+                    <input aria-label="Search">
+                </md-input-container>
+                <md-input-container>
+                    <md-select ng-model="vm.searchType" aria-label="Search by" layout="row" layout-align="start center" ng-change="vm.onChangeSearchType()">
+                        <md-option ng-value="1" selected>Phone</md-option>
+                        <md-option ng-value="2">First Name</md-option>
+                        <md-option ng-value="3">Last Name</md-option>
+                        <md-option ng-value="4">Email</md-option>
+                        <md-option ng-value="5">Ad Id</md-option>
+                        <md-option ng-value="6">Offer Id</md-option>
+                        <md-option ng-value="7">Reference Number</md-option>
+                        <md-option ng-value="8">TRM Contract Number</md-option>
+                    </md-select>
+                </md-input-container>
+                <md-button class="md-fab md-mini md-primary" aria-label="Submit">
+                    <md-icon md-svg-src="../../../assets/images/Search.svg"></md-icon>
+                </md-button>
+                <md-button class="md-raised md-primary">Advanced Search</md-button>
+                <md-checkbox>
+                    Admin Mode?
+                </md-checkbox>
+            </div>
+        </md-toolbar>
+    </div>
+    <div class="content">
+        <md-sidenav class="md-sidenav-left md-whiteframe-z1" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
+            <md-content role="navigation">
+                <ul class="side-menu">
+                    <li ng-repeat="section in vm.menu.sections" class="parent-list-item"
+                        ng-class="{'parentActive' : vm.isOpen(section)}">
+                        <h2 class="menu-heading" ng-if="section.type === 'heading'"
+                            id="heading_{{ section.name | nospace }}">
+                            {{section}}
+                        </h2>
+                        <dashboard-menu-link section="section" ng-if="section.type === 'link'"></dashboard-menu-link>
+                        <dashboard-menu-toggle section="section" ng-if="section.type === 'toggle'"></dashboard-menu-toggle>
+                    </li>
+                </ul>
+            </md-content>
+        </md-sidenav>
+    </div>
+</div>

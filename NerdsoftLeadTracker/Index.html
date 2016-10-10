@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <base href="/">
+    <title>Nerdsoft Tracker</title>
+
+    <!--CSS-->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,700,400|Ubuntu:500,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.9/angular-material.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body ng-app="nerdsoftTracker">
+    
+    <div class="fill-height">
+        <div ui-view></div>
+    </div>
+    
+    <!--Libraries-->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-local-storage/0.2.7/angular-local-storage.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-cookies.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/es6-promise/3.2.2/es6-promise.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-animate.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-aria.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-messages.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angular_material/1.0.9/angular-material.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+
+    <!--Environment Vars-->
+    <script src="app/env.js"></script>
+
+    <!--Shared-->
+    <script src="app/app.js"></script>
+    <script src="app/shared/auth/authInterceptor.service.js"></script>
+    <script src="app/shared/auth/auth.service.js"></script>
+    <script src="app/shared/auth/tokenmanager.service.js"></script>
+    <script src="app/shared/httpRequest/httpRequest.service.js"></script>
+    <script src="app/shared/toast/toast.service.js"></script>
+    <script src="app/shared/routing/routing.service.js"></script>
+
+    <!--Services-->
+    <script src="app/components/dashboard/dashboard.service.js"></script>
+    <script src="app/components/dashboardMenu/dashboardmenu.service.js"></script>
+
+    <!--Controllers-->
+    <script src="app/components/login/login.js"></script>
+    <script src="app/components/passwordReset/passwordreset.js"></script>
+    <script src="app/components/dashboard/dashboard.js"></script>
+    <script src="app/components/dashboardMenu/dashboardmenu.js"></script>
+
+    <!--Directives-->
+    <script src="app/directives/dashboardMenuToggle.directive.js"></script>
+    <script src="app/directives/dashboardMenuLink.directive.js"></script>
+
+</body>
+</html>

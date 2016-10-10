@@ -1,0 +1,22 @@
+﻿<form role="form" class="loginForm">
+    <div>
+        <img src="../../../assets/images/Nerdsoft_Tracker_Logo.svg" />
+        <md-input-container>
+            <input type="text" class="form-control" placeholder="Username" data-ng-model="loginData.userName" required autofocus>
+        </md-input-container>
+        <md-input-container>
+            <input type="password" class="form-control" placeholder="Password" data-ng-model="loginData.password" required>
+        </md-input-container>
+        <md-checkbox data-ng-model="loginData.useRefreshTokens">Remember me on this computer</md-checkbox>
+        <div>
+            <md-button class="md-raised md-primary" type="submit" data-ng-click="login()">Login</md-button>
+        </div>
+        <div class="recover">
+            <label>Forgot your password?</label>
+            <a href="/#/PasswordReset">Click here</a>
+        </div>
+        <div data-ng-hide="message == ''" class="loginError">
+            <label>{{message}}</label>
+        </div>
+    </div>
+</form>
